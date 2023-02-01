@@ -47,7 +47,6 @@ const Product=()=>{
             </select>
            
             </div>
-             <Pagination currentproducts={currentproducts} total={data.length} perpage={perpage} paginate={paginate}/>
              {prod.length ? (<h1>selected category</h1> ):(null) }
              { 
                 
@@ -63,7 +62,8 @@ const Product=()=>{
                         </span>
                         
                     )
-                      })):( null)
+                     })): <Pagination currentproducts={currentproducts} total={data.length} perpage={perpage} paginate={paginate}/>
+
                 
             }
         </div>
